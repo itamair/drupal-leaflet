@@ -27,10 +27,10 @@ function leaflet_libraries_info() {
     // Only used in administrative UI of Libraries API.
     'name' => 'Leaflet JavaScript Library',
     'vendor url' => 'http://leafletjs.com/',
-    'download url' => 'http://cdn.leafletjs.com/downloads/leaflet-0.7.5.zip',
+    'download url' => 'http://cdn.leafletjs.com/leaflet/v1.0.2/leaflet.zip',
     'version arguments' => array(
       'file' => 'leaflet.js',
-      // Handle things like  version:"1.0.0-beta.2"
+      // Handle patterns like  version: "1.0.2+4bbb16c"
       'pattern' => '/version[=: ]*[\'"]([\d+\.]+[\-a-z\.\d]*)[\'"]/',
     ),
     'files' => array(
@@ -48,7 +48,8 @@ function leaflet_libraries_info() {
         // For AdvAgg module. See [#2294639] This runs after leaflet.js.
         'leaflet_imagepath' => array(
           'type' => 'inline',
-          'data' => 'L.Icon.Default.imagePath = "' . base_path() . libraries_get_path('leaflet') . '/images";',
+          // Note: ends with "/"
+          'data' => 'L.Icon.Default.imagePath = "' . base_path() . libraries_get_path('leaflet') . '/images/";',
         ),
       ),
       'css' => array(
