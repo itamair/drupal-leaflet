@@ -361,4 +361,11 @@ class leaflet_views_plugin_style extends views_plugin_style {
     }
     return;
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  function even_empty() {
+    return !$this->options['hide_empty'];
+  }
 }
