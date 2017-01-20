@@ -113,7 +113,9 @@ function leaflet_libraries_info() {
  *   A renderable array.
  */
 function leaflet_build_map($map, $features = array(), $height = '400px') {
-  $map_id = drupal_html_id('leaflet_map');
+  // [#2777321] With two maps on 1 page, drupal_html_id() sometimes fails to
+  // return a unique id. Make it so.
+  $map_id = drupal_html_id('leaflet_map') . '-' . rand();
   $build = array(
     '#theme' => 'html_tag',
     '#tag' => 'div',
