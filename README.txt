@@ -12,16 +12,41 @@ o via Views (and Geofield)
 o by using the API directly.
 
 
-Installation
-------------
+Installation (manual)
+---------------------
 
 1. Normal Drupal module installation
 
-2. Download the Leaflet library from http://leafletjs.com/. Leaflet 0.6.x or
+2. Download the Leaflet library from http://leafletjs.com/. Leaflet 1.0.2 or
    higher is recommended
 
-3. Enable leaflet_views for using Views and Leaflet (see below), or use the 
+3. Enable leaflet_views for using Views and Leaflet (see below), or use the
    display formatters for fields display.
+
+
+Installation (composer)
+-----------------------
+
+1. Run $ composer require drupal/leaflet:~1.0
+
+2. Add the proper repository to your composer.json file to be able to require
+   the JS library:
+    {
+      "type": "package",
+      "package": {
+        "name": "leaflet/leaflet",
+        "version": "1.0.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/Leaflet/Leaflet/archive/v1.0.2.zip",
+          "type": "zip"
+        }
+      }
+    }
+
+3. Run $ composer require leaflet/leaflet:~1.0
+
+4. Enable Drupal modules as usual.
 
 
 API Usage
