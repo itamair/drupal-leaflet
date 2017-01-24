@@ -1,10 +1,9 @@
 
 This module provides integration with Leaflet map scripting library,
-http://leaflet.cloudmade.com.
+http://leafletjs.com
 
 To use it you must download the leaflet JS library from either
-http://leafletjs.com/download.html or
-GitHub, http://github.com/CloudMade/Leaflet
+http://leafletjs.com/download.html or GitHub,https://github.com/Leaflet/Leaflet
 
 In its current state, maps can be rendered as follows:
 o via the included field formatter for Geofield (drupal.org/project/geofield)
@@ -63,8 +62,8 @@ This is the tricky pary. This is an associative array of all the features you
 want to plot on the map. A feature can be a point, linestring, polygon,
 multipolygon, multipolygon, or json object. Additionally, features can be
 grouped into layer groups so they can be controlled together,
-http://leaflet.cloudmade.com/reference.html#layergroup. An feature will look
-something like:
+http://leafletjs.com/reference.html#layergroup. A feature will look something
+like:
 
 $features = array(
   array(
