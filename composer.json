@@ -1,5 +1,5 @@
 {
-  "name": "drupal/leaflet",
+  "name": "itamair/leaflet",
   "description": "Integration with the Leaflet map scripting library.",
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/leaflet",
