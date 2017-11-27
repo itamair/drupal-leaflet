@@ -35,5 +35,22 @@
     "source": "http://cgit.drupalcode.org/leaflet"
   },
   "license": "GPL-2.0+",
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "leaflet/leaflet",
+        "version": "v0.7.7",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/Leaflet/Leaflet/archive/v1.0.3.zip",
+          "type": "zip"
+        }
+      }
+    }
+  ],
+  "require": {
+    "leaflet/leaflet": "^1.0.3"
+  }
 }

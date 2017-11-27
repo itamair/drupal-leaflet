@@ -34,10 +34,10 @@ Installation (composer)
       "type": "package",
       "package": {
         "name": "leaflet/leaflet",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "type": "drupal-library",
         "dist": {
-          "url": "https://github.com/Leaflet/Leaflet/archive/v1.0.2.zip",
+          "url": "https://github.com/Leaflet/Leaflet/archive/v1.0.3.zip",
           "type": "zip"
         }
       }

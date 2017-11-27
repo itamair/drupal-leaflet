@@ -22,14 +22,12 @@ use Drupal\Core\Render\RendererInterface;
  * Attributes set below end up in the $this->definition[] array.
  *
  * @ViewsStyle(
- *   id = "leafet_map",
+ *   id = "leaflet_map",
  *   title = @Translation("Leaflet map (old)"),
  *   help = @Translation("Displays a View as a Leaflet map."),
  *   display_types = {"normal"},
  *   theme = "leaflet-map"
  * )
- *
- * @deprecated Should be removed in favor of other plugins.
  */
 class LeafletMap extends StylePluginBase implements ContainerFactoryPluginInterface {
 
@@ -171,7 +169,7 @@ class LeafletMap extends StylePluginBase implements ContainerFactoryPluginInterf
     foreach ($this->displayHandler->getHandlers('field') as $field_id => $handler) {
       $label = $handler->adminLabel() ?: $field_id;
       $fields[$field_id] = $label;
-      if (is_a($handler, '\Drupal\views\Plugin\views\field\Field')) {
+      if (is_a($handler, 'Drupal\views\Plugin\views\field\EntityField')) {
         $field_storage_definitions = $this->entityFieldManager
           ->getFieldStorageDefinitions($handler->getEntityType());
         $field_storage_definition = $field_storage_definitions[$handler->definition['field_name']];
